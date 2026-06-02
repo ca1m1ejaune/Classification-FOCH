@@ -16,3 +16,11 @@ scikit-learn>=1.2.0
 # Visualisation
 matplotlib>=3.7.0
 seaborn>=0.12.0
+
+# Augmentation de données (notebook 3_0)
+soundfile>=0.12.0          # écriture des WAV augmentés
+praat-parselmouth>=0.4.5   # validation acoustique (jitter/shimmer/HNR/F0)
+# NB : audiomentations / librosa NON listés — pas de wheels sous Python 3.14
+#      (numba/MSVC requis). L'augmentation signal-level est implémentée en
+#      NumPy / torchaudio / SciPy dans 3_0_foch_test.ipynb.
+# NB : SeedVC (Plachtaa/seed-vc) s'installe séparément (dépôt + checkpoints, GPU).
